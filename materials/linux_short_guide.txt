@@ -1,0 +1,59 @@
+ Linux command line quick start guide                                rev.23102024
+=================================================================================
+ Computer Architectures - Laboratory
+ Prof. Filippo Bergamasco
+ Ca'Foscari University of Venice
+
+
+
+# Filesystem operations
+
+Command         |     Description
+----------------+-------------------------------------------------------
+pwd                 shows the current directory's path
+
+ls                  list content of current directory
+
+ls -l               list with informations about file attributes
+                    and ownership
+
+cd <dir>            change directory to <dir>. <dir> can be a relative
+                    path (like a/b/c) or an absolute path (/a/b/c).
+
+cd ..               go up a directory 
+
+touch <file>        create an empty file
+
+mkdir <dir>         create a directory <dir>
+
+rm <file>           delete <file>
+
+rm -R <dir>         removes a directory <dir> with all its content
+
+cp <f1> <f2>        copy <f1> to <f2>
+
+cp -R <d1> <d2>     copy directory <d1> to directory <d2>
+
+7z x <archive>      extract an archive
+
+
+
+# Program execution
+
+Command         |     Description
+----------------+-------------------------------------------------------
+./<program>         execute a program in current directory
+
+<program>           execute a program in system's path
+
+ctrl-z              stop the currently running program and return to
+                    the shell
+
+fg                  resume a previously stopped program
+
+px                  list running programs
+
+kill <pid>          forcefully kill a running program given the process
+                    id <pid>
+
+
