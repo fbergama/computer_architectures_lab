@@ -1,14 +1,7 @@
-    .cpu cortex-a53 // direttiva che specifica il tipo
-                    // di CPU
+    .global _start
 
-    .text           // Inizio della text section
-    .p2align 2      // l'indirizzo deve essere multiplo di 2^2
-
-
-    .global _start  // definiamo un simbolo globale chiamato _start
-
-_start:             // etichetta _start specifica l'entry-point del
-                    // nostro programma
+_start:          
+                
 
     mov x0, #10
     mov x1, #1
