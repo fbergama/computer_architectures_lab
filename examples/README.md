@@ -13,5 +13,8 @@ A simple program that exits with return code 3
 
 Shows how the linker combines multiple object files
 
+## variables
 
+An example to understand how global and stack variables are
+managed by the compiler/linker.
 
