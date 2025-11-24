@@ -1,15 +1,14 @@
-int a=10;
+int a=1230;
 int b=-1;
-int c=1;
 
 
 int main()
 {
-    int d;
+    int c;
 
-    c=a+b;
+    c = a;
+    a = b;
+    b = c;
 
-    d = a+b+c;
-    c = d;
     return 0;
 }

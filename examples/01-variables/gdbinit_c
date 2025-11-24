@@ -1,0 +1,11 @@
+# GDB init script to simplify debugging
+# of C programs
+# run it with:
+# gdb --command=gdbinit_c <program>
+
+tui new-layout mylayout regs 2 asm 2 src 1 cmd 1
+layout mylayout
+tui window height cmd -8
+
+b main
+

@@ -1,7 +1,7 @@
 # variables / variables_c
 #
-# Simple programs demonstrating how (global) 
-# variables work in C and assembly
+# Simple programs demonstrating how variables 
+# are managed in C and assembly.
 #
 # variables: assembly version
 # variables_c: C version
@@ -47,7 +47,7 @@ variables_c: variables.c
 	#
 	######## Dump object file's content ########
 	#
-	objdump -d -j .data -j .text variables_c.o > variables_c.assembled.dump
+	objdump -d -s variables_c.o > variables_c.assembled.dump
 	readelf -a variables_c.o > variables_c.assembled.readelf.dump
 	#
 	######## Link ########
