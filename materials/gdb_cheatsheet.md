@@ -24,6 +24,15 @@ registers, at the center the program disassebly and at the bottom the gdb
 console.
 To use c-x o (Ctrl+x o) to cycle focus between each window.
 
+
+Note: in some examples, an init script is provided. In this case, launch
+gdb with:
+
+$ gdb --command=<init_file> <executable_file>
+
+follow the README.md in each example directory for more info.
+
+
 3) Run the program and stop at the first instruction (_start entrypoint)
 
 (gdb) starti
@@ -66,12 +75,17 @@ List of useful commands:
 (gdb) x/<n>xb <addr>
 
     where <n> is the number of bytes
-    <addr> is a memory address, or the address of a variable &<var>
+    <addr> can be a memory address, the address of a variable &<var>, 
+           or an address contained in a register $reg
+
+    for example, to dump 16 bytes from the SP:
+
+    x/16xb $sp
 
 
 5) quit the debugger
-(gdb) quit
 
+(gdb) quit
 
 
 
