@@ -24,3 +24,8 @@ managed by the compiler/linker.
 
 Shows how to iterate over an array of integers using indices
 or pointer arithmetics
+
+## strings
+
+Lowercase to uppercase conversion example. It demonstrates how to iterate over
+a string.
