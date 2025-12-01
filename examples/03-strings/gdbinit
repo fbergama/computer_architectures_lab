@@ -6,6 +6,6 @@
 
 layout asm
 layout reg
-tui window height cmd -8
+#tui window height cmd -8
 focus cmd
 
