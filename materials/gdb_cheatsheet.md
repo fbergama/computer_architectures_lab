@@ -97,6 +97,17 @@ For example, to dump 16 bytes from the SP:
 
 `x/16xb $sp`
 
+If you want to interpret a memory address in a different format, substitute `xb` with one of the following:
+
+- `w` or `uw` for 4-bytes signed or unsigned word (int)
+- `g` or `ug` for 8-bytes signed or unsigned dword (long int)
+
+For example, to read the memory location pointed by the symbol `a` as a 32bit unsigned int:
+
+```
+x/uw &a
+```
+
 
 ## 5) quit the debugger
 ```
