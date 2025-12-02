@@ -29,3 +29,8 @@ or pointer arithmetics
 
 Lowercase to uppercase conversion example. It demonstrates how to iterate over
 a string.
+
+## functions
+
+Shows how to invoke a function according to the ARM Procedure Call Standard
+
