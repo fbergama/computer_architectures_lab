@@ -49,7 +49,7 @@ $2 = (char (*)[12]) 0xfffffffffa90
 
 `valid` is exactly 13 bytes after `user_password`! So, if we put more than 12
 bytes into `user_password` we'll start to overwrite the memory location
-referred by the `valid` variable. This makes sense because valid and
+referred by the `valid` variable. This makes sense because `valid` and
 `user_password` are defined one after the other and therefore they are pushed in
 the stack in the same order.
 
@@ -97,7 +97,7 @@ must be stored somewhere. Indeed, if we disassemble the `main()`:
 ```
 
 
-we see that the first instruction pushes the value of x30 in the stack before
+we see that the first instruction pushes the value of `x30` in the stack before
 branching to `checkpassword()`. That value will be restored before returning
 from the main. Since the main return address is pushed into the stack before
 the `user_password` array, an overflow can potentially overwrite the address to
@@ -122,7 +122,7 @@ $2 = (unsigned int *) 0xfffffffffa9c
 
 
 In this example, `user_password` is located at `0xfffffffffa90`. 13 bytes after
-that we have the address of valid, and then the return address of the `main()`
+that we have the address of `valid`, and then the return address of the `main()`
 function at:
 
 ```
@@ -181,13 +181,13 @@ when the `main()` returns.
 To do so, we have to enter a password composed by 16 characters (does not
 matter which ones) followed by the bytes `0xf4`, `0x02` and `0x40`. Since we
 cannot insert those bytes with the keyboard, we'll use the echo command and
-pipe the output to the ./password standard input in this way:
+pipe the output to the `./password` standard input in this way:
 
 ```
 echo -n -e "0000000000000000\\xf4\\x02\\x40" | ./password
 ```
 
-the output should be like:
+the output should be something like:
 
 ```
 Enter password:
