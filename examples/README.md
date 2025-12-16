@@ -34,3 +34,9 @@ a string.
 
 Shows how to invoke a function according to the ARM Procedure Call Standard
 
+## password
+
+Shows how variables allocated in the stack can be exploited
+for malicious purpuses (i.e. stack overflow). See the attached
+README file.
+
